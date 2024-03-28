@@ -6,7 +6,7 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://careercanvas-aj.vercel.app"|| "http://localhost:5173/" }));
+app.use(cors({ origin: "https://careercanvas-aj.vercel.app"}));
 app.get("/", (request, response) => {
   response.json({ message: "Hello!!" });
 });
