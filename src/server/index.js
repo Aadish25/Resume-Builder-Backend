@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
-import express, { response } from "express";
+import express from "express";
 import routes from "../core/routes/routes.js";
 import databaseConnect from "../core/database/db.js";
 import cors from "cors";
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://careercanvas-aj.vercel.app"}));
+
+// Define the allowed origins
+const allowedOrigins = ["http://localhost:5173", "https://careercanvas-aj.vercel.app","https://career--canvas.vercel.app/"];
+
+app.use(cors({ origin: allowedOrigins }));
 app.get("/", (request, response) => {
   response.json({ message: "Hello!!" });
 });
