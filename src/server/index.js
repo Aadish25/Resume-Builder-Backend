@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 // Define the allowed origins
-const allowedOrigins = ["http://localhost:5173", "https://careercanvas-aj.vercel.app","https://career--canvas.vercel.app/"];
+const allowedOrigins = ["http://localhost:5173", "https://careercanvas-aj.vercel.app","https://career--canvas.vercel.app"];
 
 app.use(cors({ origin: allowedOrigins }));
 app.get("/", (request, response) => {
